@@ -1,0 +1,10 @@
+/vendor
+/var/cache/*
+!/var/cache/.gitkeep
+/var/log/*
+!/var/log/.gitkeep
+.idea
+.DS_Store
+
+public/*
+!public/index.php

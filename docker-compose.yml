@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  web_api:
+    image: nginx:1.15
+    ports:
+      - 8080:80
+    volumes:
+      - ./:/var/www
+      - ./dev/nginx/conf.d/site.conf:/etc/nginx/conf.d/default.conf
+
+  php_api:
+    image: dockerwest/php-symfony:7.2
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www
+    environment:
+      - APP_ENV=dev
+      - DEVELOPMENT=1
+
+  node_sass:
+    image: catchdigital/node-sass:8.12.0-alpine
+    command: sh
+    volumes:
+      - ./:/var/www
+
+  npm:
+    image: node:10
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/var/www
+    working_dir: /var/www/react-app
