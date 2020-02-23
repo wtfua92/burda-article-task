@@ -1,7 +1,7 @@
-@use "sass:map";
-@import "assets/styles/grid";
-@import "assets/styles/variables";
-@import "assets/styles/hidden";
+@use "App";
+@import "../../assets/styles/grid";
+@import "../../assets/styles/variables";
+@import "../../assets/styles/hidden";
 
 @include grid(4, 15px);
 
@@ -50,7 +50,7 @@ body {
   }
 
   .sidebar {
-    height: 100%;
+    height: calc(100% - 5rem);
     padding: 1rem;
     border: 10px solid $pink;
   }

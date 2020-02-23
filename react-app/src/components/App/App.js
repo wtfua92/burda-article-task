@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import './App.scss';
 
-import Header from "./components/Header";
-import Article from "./components/Article/Article";
+import Header from "../Header";
+import Article from "../Article";
+import Footer from "../Footer";
 
 function App() {
   const [articleData, setArticleData] = useState(null);
@@ -31,6 +32,7 @@ function App() {
                   </>
               }
           </main>
+          <Footer/>
       </>
 
   );

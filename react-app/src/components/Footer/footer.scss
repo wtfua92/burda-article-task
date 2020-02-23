@@ -1,0 +1,11 @@
+@import "src/assets/styles/variables";
+
+.footer {
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: $pink;
+  font-size: $font-size-lg;
+}
