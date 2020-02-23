@@ -3,16 +3,10 @@ import React from 'react';
 function ArticleHead({
      title,
      publishDate,
-     imgData: {
-         url,
-         alt,
-         width,
-         height
-     },
-    authorData: {
+     authorData: {
          authorName,
          authorLink
-    }
+     }
 }) {
     const publishDateLocalized = new Date(publishDate * 1000).toLocaleDateString();
     const publishTimeLocalized = new Date(publishDate * 1000).toLocaleTimeString();

@@ -3,14 +3,15 @@ import React from 'react';
 import Paragraph from "./Paragraph/Paragraph";
 import MediaParagraph from "./Paragraph/MediaParagraph";
 import ArticleHead from "./ArticleHead";
-
-import "./article.scss"
 import {getAuthorData} from "../../utils/helpers";
 
+import "./article.scss"
+
 const makeParagraph = (text) => (<Paragraph content={{__html: text}} />);
-const makeMediaParagraph = (imgData, text, url) => (<MediaParagraph imgData={imgData} footNote={{__html: text}} url={url} />);
+
+const makeMediaParagraph = (imgData, text) => (<MediaParagraph imgData={imgData} footNote={{__html: text}} />);
+
 const makeArticleHead = (headMedia, author, title, date) => {
-    console.log(author);
     const authorData = getAuthorData(author);
     const imgData = headMedia.entity.fieldImage;
 

@@ -10,11 +10,23 @@
         {% if error|default %}
             <p>{{ error }}</p>
         {% endif %}
-        <header>
-            <h1>Test 2</h1>
+        <header class="header">
+            <a href="#" class="header__label">
+                <h1>Burda</h1>
+            </a>
+            <nav class="header__links">
+                <a href="#" class="header__link">Home</a>
+                <a href="#" class="header__link">About us</a>
+                <a href="#" class="header__link">Contacts</a>
+            </nav>
         </header>
-        {% block body %}
-        {% endblock %}
+        <main class="main">
+            {% block article %}
+            {% endblock %}
+        </main>
+        <footer class="footer">
+            <span>&copy; Burda Media, 2020 </span>
+        </footer>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
