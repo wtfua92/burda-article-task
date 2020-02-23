@@ -12,7 +12,8 @@
   box-shadow: 0px 5px 0px -3px $pink;
   background-color: rgba($white, 0.98);
   transform: translateY(0);
-  transition: transform .25s ease-out;
+  transition: transform .2s ease-out;
+  z-index: 1000;
 
   &__link, &__label {
     color: $black;
@@ -32,5 +33,5 @@
 
 .header--hidden {
   transform: translateY(-105%);
-  transition: transform .25s ease-out;
+  transition: transform .2s ease-out;
 }

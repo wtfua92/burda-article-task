@@ -5,7 +5,7 @@ import './header.scss';
 
 function Header() {
     const [prevScrollTop, setPrevScrollTop] = useState(0);
-    const [scrollDown, setScrollDown] = useState(true);
+    const [scrollDown, setScrollDown] = useState(false);
     const [isBottom, setIsBottom] = useState(false);
     let className = useHeaderClassname(scrollDown, isBottom);
 

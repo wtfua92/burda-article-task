@@ -1,0 +1,44 @@
+@import "src/assets/styles/variables";
+
+.article {
+  height: 100%;
+  display: flex;
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__publish-info,
+  &__image-footnote {
+    display: flex;
+    justify-content: space-between;
+    font-size: $font-size-lg;
+    line-height: $font-size-xl;
+    width: 100%;
+    padding: 0.25rem 0.5rem;
+    margin: 1rem 0.75rem 0.5rem;
+    background-color: $blue;
+
+    * {
+      color: $white;
+    }
+  }
+
+  &__publish-info {
+    margin: 0 0.75rem 1.25rem;
+  }
+
+  &__paragraph {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: $font-size-xl;
+    line-height: 2.2rem;
+    margin-bottom: 2rem;
+
+    &--media {
+      margin-bottom: 1rem;
+    }
+  }
+
+
+}
