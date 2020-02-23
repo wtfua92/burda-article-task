@@ -1,0 +1,17 @@
+@media screen and (max-width: 599px) {
+  .hidden-sm {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .hidden-md {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .hidden-lg {
+    display: none;
+  }
+}

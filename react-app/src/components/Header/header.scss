@@ -1,0 +1,36 @@
+@import 'src/assets/styles/variables';
+
+.header, .header--hidden {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  box-shadow: 0px 5px 0px -3px $pink;
+  background-color: rgba($white, 0.98);
+  transform: translateY(0);
+  transition: transform .25s ease-out;
+
+  &__link, &__label {
+    color: $black;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+      &, h1 {
+        color: $blue;
+      }
+    }
+  }
+
+  &__link {
+    margin: 0 0.75rem;
+  }
+}
+
+.header--hidden {
+  transform: translateY(-105%);
+  transition: transform .25s ease-out;
+}

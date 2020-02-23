@@ -1,0 +1,38 @@
+@import "variables";
+
+@mixin makeCol($orderNumber, $totalCols, $gutter, $breakpoint: "", $column: false) {
+  $className: col;
+  @if $breakpoint != "" {
+    $className: #{$className}-#{$breakpoint}
+  }
+  @if $column {
+    $className: #{$className}-vr;
+  }
+  .#{$className}-#{$orderNumber} {
+    flex-basis: (100% / $totalCols) * $orderNumber;
+    max-width: (100% / $totalCols) * $orderNumber;
+    padding: 0 $gutter/2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    @if $column {
+      flex-direction: column;
+    }
+  }
+}
+
+@mixin grid($cols, $gutter) {
+  @for $i from 1 to ($cols + 1) {
+    @include makeCol($i, $cols, $gutter);
+    @include makeCol($i, $cols, $gutter, '', true);
+  }
+
+  @each $breakpoint, $minWidth in $breakpoints {
+    @media screen and (min-width: $minWidth) {
+      @for $i from 1 to ($cols + 1) {
+        @include makeCol($i, $cols, $gutter, $breakpoint);
+        @include makeCol($i, $cols, $gutter, $breakpoint, true);
+      }
+    }
+  }
+}
