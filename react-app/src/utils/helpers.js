@@ -1,14 +1,12 @@
 export function getAuthorData({
-    user: {
-        entityUrl: {
-            path: authorLink = '/'
-        },
-        fieldForename,
-        fieldSurname
-    }
+  user: {
+    entityUrl: { path: authorLink = "/" },
+    fieldForename,
+    fieldSurname
+  }
 }) {
-    return {
-        authorName: `${fieldForename} ${fieldSurname}`,
-        authorLink
-    }
+  return {
+    authorName: `${fieldForename} ${fieldSurname}`,
+    authorLink
+  };
 }

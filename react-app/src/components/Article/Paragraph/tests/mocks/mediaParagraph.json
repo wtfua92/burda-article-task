@@ -1,17 +1,20 @@
 {
-  "fieldMedia": {
-    "entity": {
-      "entityUrl": {
-        "path": "/media/978461"
-      },
-      "fieldImage": {
-        "alt": "Alt",
-        "height": 100,
-        "url": "Url",
-        "width": 100
-      },
-      "fieldDescription": {
-        "processed": "<p>Description</p>"
+  "entity": {
+    "id": 2243501,
+    "fieldMedia": {
+      "entity": {
+        "entityUrl": {
+          "path": "/media/978461"
+        },
+        "fieldImage": {
+          "alt": "Alt",
+          "height": 100,
+          "url": "Url",
+          "width": 100
+        },
+        "fieldDescription": {
+          "processed": "<p>Description</p>"
+        }
       }
     }
   }
